@@ -1,14 +1,14 @@
-import 'package:firebase/signup.dart';
+import 'package:firebase/login.dart';
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
-  const Login({super.key});
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _LoginState extends State<Login> {
+class _SignupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
                   style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 20),
-                const Text("Welcome to the Firebase App!",
+                const Text("Welcome Back!",
                     style:
                         TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
                 Padding(
@@ -74,7 +74,7 @@ class _LoginState extends State<Login> {
                 ElevatedButton(
                   onPressed: () {},
                   child: const Text(
-                    'Login',
+                    'Sign up',
                     style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
@@ -96,10 +96,10 @@ class _LoginState extends State<Login> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Signup()));
+                                builder: (context) => const Login()));
                       },
                       child: const Text(
-                        " Sign up",
+                        " Login",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.blue),
                       ),
